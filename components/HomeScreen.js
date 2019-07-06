@@ -3,7 +3,7 @@ import { Button, View, Text } from 'react-native';
 
 class HomeScreen extends PureComponent {
     static navigationOptions = {
-        title: 'Login'
+        title: 'Home'
     };
     render() {
         return (
@@ -11,7 +11,8 @@ class HomeScreen extends PureComponent {
                 <Text>Welcome to</Text>
                 <Text>Track 2020</Text>
                 <Button title="Login"
-                onPress={() => this.props.navigationOptions.navigate('Login')} />
+                onPress={() => this.props.navigation.navigate('Login')} />
+                <Button title="Sign-Up" onPress={() => this.props.navigation.navigate('Sign-Up')} />
             </View>
         )
     }
